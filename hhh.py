@@ -5,9 +5,9 @@ from email.mime.multipart import MIMEMultipart
 
 # Fungsi untuk mengirim email
 def send_email(message):
-    sender_email = "luvlub@gmail.com"  # Ganti dengan email pengirim
-    receiver_email = "matthewsutandang.tren@gmail.com"  # Ganti dengan email penerima (pemilik)
-    password = "Test1029384756"  # Ganti dengan password email pengirim (gunakan App Password jika Gmail)
+    sender_email = "matthewsutandang.tren@gmail.com"  # Ganti dengan email pengirim
+    receiver_email = "luvlubtest@gmail.com"  # Ganti dengan email penerima (pemilik)
+    password = "gkly zfzx vohz zgon"  # Ganti dengan password email pengirim (gunakan App Password jika Gmail)
 
     # Set up server SMTP Gmail
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
@@ -148,7 +148,7 @@ html_content = """
 st.components.v1.html(html_content, height=600)
 
 # Menambahkan fitur email setelah pesan dikirim
-message = st.text_area("Pesan untuk pacar kamu:")
+message = st.text_area("Pesan untuk saya:")
 if st.button("Kirim Pesan"):
     if message:
         send_email(message)
