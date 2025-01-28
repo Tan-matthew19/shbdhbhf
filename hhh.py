@@ -148,7 +148,7 @@ html_content = """
 st.components.v1.html(html_content, height=600, scrolling=True)
 
 # Pemutar musik MP3
-st.markdown("## 🎵 Pemutar Musik")
+st.markdown("## 💌 ")
 audio_file = open("Valentine.mp3", "rb")
 st.audio(audio_file.read(), format="audio/mp3")
 
