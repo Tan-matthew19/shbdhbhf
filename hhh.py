@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -146,6 +146,11 @@ html_content = """
 
 # Menampilkan HTML di Streamlit
 st.components.v1.html(html_content, height=600, scrolling=True)
+
+# Pemutar musik MP3
+st.markdown("## 🎵 Pemutar Musik")
+audio_file = open("/Valentine.mp3", "rb")
+st.audio(audio_file.read(), format="audio/mp3")
 
 # Menambahkan fitur email setelah pesan dikirim
 message = st.text_area("Pesan untuk saya:")
