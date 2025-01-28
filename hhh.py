@@ -1,4 +1,4 @@
-import streamlit as st 
+import streamlit as st
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -41,6 +41,7 @@ html_content = """
         padding: 0;
         font-family: 'Poppins', Arial, sans-serif;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -101,6 +102,20 @@ html_content = """
         background-color: #e43e3e;
         transform: scale(1.05);
     }
+    footer {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+        color: #555;
+    }
+    footer a {
+        color: #4caf50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +127,9 @@ html_content = """
     <button class="no-btn">No</button>
   </div>
 </div>
+<footer>
+  Created with ❤️ by <a href="mailto:matthewsutandang.tren@gmail.com">Stanislaus Matthew Sutandang</a>
+</footer>
 <script>
   const yesBtn = document.querySelector(".yes-btn");
   const noBtn = document.querySelector(".no-btn");
@@ -145,7 +163,7 @@ html_content = """
 """
 
 # Menampilkan HTML di Streamlit
-st.components.v1.html(html_content, height=600, scrolling=True)
+st.components.v1.html(html_content, height=700, scrolling=True)
 
 # Pemutar musik MP3
 st.markdown("## 💌")
@@ -162,8 +180,6 @@ try:
         st.audio(audio_file2.read(), format="audio/mp3")
 except FileNotFoundError:
     st.error("File 'Blessed.mp3' tidak ditemukan. Pastikan file tersedia.")
-
-
 
 # Menambahkan fitur email setelah pesan dikirim
 message = st.text_area("Pesan untuk Pengirim:")
