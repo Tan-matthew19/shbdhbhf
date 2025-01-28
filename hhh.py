@@ -175,3 +175,6 @@ if st.button("Kirim Pesan"):
         st.success("Pesan telah terkirim! 💌")
     else:
         st.error("Pesan tidak boleh kosong.")
+
+
+st.markdown("## Created with ❤️ by M")
