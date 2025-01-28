@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 # Fungsi untuk mengirim email
 def send_email(message):
     sender_email = "matthewsutandang.tren@gmail.com"  # Ganti dengan email pengirim
-    receiver_email = "luvlubtest@gmail.com"  # Ganti dengan email penerima (pemilik)
+    receiver_email = "luvlubtest@gmail.com"  # Ganti dengan email penerima
     password = "gkly zfzx vohz zgon"  # Ganti dengan password email pengirim (gunakan App Password jika Gmail)
 
     # Set up server SMTP Gmail
@@ -50,35 +50,35 @@ html_content = """
     .wrapper {
         position: relative;
         width: 90%;
-        max-width: 500px;
+        max-width: 400px;
         text-align: center;
         background: white;
-        padding: 30px 20px;
+        padding: 20px 15px;
         border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     .question {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         color: #333;
     }
     .gif {
         max-width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     }
     .btn-group {
         display: flex;
         justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
+        gap: 10px;
+        margin-top: 15px;
     }
     button {
-        padding: 12px 30px;
-        font-size: 18px;
+        padding: 10px 20px;
+        font-size: 16px;
         font-weight: bold;
         border: none;
         border-radius: 50px;
@@ -145,7 +145,7 @@ html_content = """
 """
 
 # Menampilkan HTML di Streamlit
-st.components.v1.html(html_content, height=600)
+st.components.v1.html(html_content, height=600, scrolling=True)
 
 # Menambahkan fitur email setelah pesan dikirim
 message = st.text_area("Pesan untuk saya:")
