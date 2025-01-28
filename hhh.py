@@ -123,7 +123,7 @@ html_content = """
   const gif = document.querySelector(".gif");
 
   yesBtn.addEventListener("click", () => {
-    question.textContent = "Being with you is the greatest gift in my life. I love you. -m -m";
+    question.textContent = "Being with you is the greatest gift in my life. I love you. -m";
     gif.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGNhdXh1b252b2F2b2U4cHRlNGkwMDZsajllaGF1cDJyb2p4NXl2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/G6N0pDDgDpLjUvNoyQ/giphy.gif";
     noBtn.style.display = "none";
   });
