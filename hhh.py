@@ -149,7 +149,7 @@ st.components.v1.html(html_content, height=600, scrolling=True)
 
 # Pemutar musik MP3
 st.markdown("## 💌 ")
-audio_file = open("Valentine.mp3", "rb")
+audio_file = open("Blessed.mp3", "rb")
 st.audio(audio_file.read(), format="audio/mp3")
 
 # Menambahkan fitur email setelah pesan dikirim
