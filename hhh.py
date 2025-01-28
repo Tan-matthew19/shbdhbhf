@@ -177,4 +177,4 @@ if st.button("Kirim Pesan"):
         st.error("Pesan tidak boleh kosong.")
 
 
-st.markdown("## Created with ❤️ by M")
+st.markdown('<p style="text-align: center; font-size: 10px; color: #555;">Created with ❤️ by M</p>', unsafe_allow_html=True)
