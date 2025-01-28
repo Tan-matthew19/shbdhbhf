@@ -148,10 +148,24 @@ html_content = """
 st.components.v1.html(html_content, height=600, scrolling=True)
 
 # Pemutar musik MP3
-st.markdown("## 💌")
-audio_file = open("Love.mp3", "rb")
-audio_file = open("Blessed.mp3", "rb")
-st.audio(audio_file.read(), format="audio/mp3")
+st.markdown("## 💌 Lagu Spesial Valentine")
+
+# Pemutar lagu pertama
+st.markdown("### 🎵 Love.mp3")
+try:
+    with open("Love.mp3", "rb") as audio_file1:
+        st.audio(audio_file1.read(), format="audio/mp3")
+except FileNotFoundError:
+    st.error("File 'Love.mp3' tidak ditemukan. Pastikan file tersedia.")
+
+# Pemutar lagu kedua
+st.markdown("### 🎵 Blessed.mp3")
+try:
+    with open("Blessed.mp3", "rb") as audio_file2:
+        st.audio(audio_file2.read(), format="audio/mp3")
+except FileNotFoundError:
+    st.error("File 'Blessed.mp3' tidak ditemukan. Pastikan file tersedia.")
+
 
 # Menambahkan fitur email setelah pesan dikirim
 message = st.text_area("Pesan untuk Pengirim:")
