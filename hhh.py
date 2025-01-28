@@ -3,6 +3,10 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# Credit: Dibuat dengan cinta oleh Stanislaus Matthew Sutandang
+# Email: matthewsutandang.tren@gmail.com
+# Tujuan: Aplikasi interaktif dengan tema Valentine
+
 # Fungsi untuk mengirim email
 def send_email(message):
     sender_email = "matthewsutandang.tren@gmail.com"  # Ganti dengan email pengirim
@@ -122,10 +126,6 @@ html_content = """
     question.textContent = "Being with you is the greatest gift in my life. I love you. -m";
     gif.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGNhdXh1b252b2F2b2U4cHRlNGkwMDZsajllaGF1cDJyb2p4NXl2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/G6N0pDDgDpLjUvNoyQ/giphy.gif";
     noBtn.style.display = "none";
-    
-    // Kirim email setelah klik Yes
-    const message = "I love you.";  // Pesan yang akan dikirim
-    send_email(message);  // Mengirimkan email
   });
 
   noBtn.addEventListener("mouseover", () => {
@@ -140,8 +140,8 @@ html_content = """
     const randomY = Math.random() * maxY;
 
     noBtn.style.position = "absolute";
-    noBtn.style.left = `${randomX}px`;
-    noBtn.style.top = `${randomY}px`;
+    noBtn.style.left = ${randomX}px;
+    noBtn.style.top = ${randomY}px;
   });
 </script>
 </body>
@@ -166,3 +166,12 @@ try:
         st.audio(audio_file2.read(), format="audio/mp3")
 except FileNotFoundError:
     st.error("File 'Blessed.mp3' tidak ditemukan. Pastikan file tersedia.")
+
+# Menambahkan fitur email setelah pesan dikirim
+message = st.text_area("Pesan untuk Pengirim:")
+if st.button("Kirim Pesan"):
+    if message:
+        send_email(message)
+        st.success("Pesan telah terkirim! 💌")
+    else:
+        st.error("Pesan tidak boleh kosong.")
