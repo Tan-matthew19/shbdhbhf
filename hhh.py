@@ -149,11 +149,6 @@ st.components.v1.html(html_content, height=600, scrolling=True)
 
 # Pemutar musik MP3
 st.markdown("## 💌")
-
-# Pemutar lagu pertama
-# Pemutar musik MP3
-st.markdown("## 💌 Pemutar Lagu Spesial Valentine")
-
 # Pemutar lagu pertama
 try:
     with open("Love.mp3", "rb") as audio_file1:
